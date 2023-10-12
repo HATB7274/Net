@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Netron</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="./css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./dist/login.css">
+</head>
+
+
+<body>
+  
+
+
+   <!--head-->
+   <section> 
+    <!-- header -->
+    <header class="fixed-top header">
+      <!-- top header -->
+      <div class="top-header py-2 bg-white">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-lg-4 text-center text-lg-left">
+              <a class="text-color mr-3" href="callto:+443003030266"><strong>CALL</strong> +91 8843588534</a>
+              <ul class="list-inline d-inline">
+                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
+                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/bnma_psgcas/"><i class="ti-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
+                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="research.html">research</a></li>
+                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">SCHOLARSHIP</a></li>
+                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#log2">Login</a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- navbar -->
+      <div class="navigation w-100">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a class="navbar-brand" href="index.html"><div class="keyboard">
+              <span class="key">N</span>
+              <span class="key">M</span>
+              <span class="key">A</span>
+              
+            </div>
+            
+            
+            
+            <!-- extra stuff -->
+            </a>
+            <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item @@about">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item @@courses">
+                  <a class="nav-link" href="courses.html">COURSES</a>
+                </li>
+                <li class="nav-item @@events">
+                  <a class="nav-link" href="events.html">EVENTS</a>
+                </li>
+                <li class="nav-item @@blog">
+                  <a class="nav-link" href="blog.html">BLOG</a>
+                </li>
+                <li class="nav-item dropdown view">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="teacher.html">Teacher</a>
+                    <!--
+                    <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
+                    -->
+                    <a class="dropdown-item" href="notice.html">Notice</a>
+                    <a class="dropdown-item" href="notice-single.html">Notice Details</a>
+                    <a class="dropdown-item" href="research.html">Research</a>
+                    <a class="dropdown-item" href="scholarship.html">Scholarship</a>
+                    <a class="dropdown-item" href="course-single.html">Course Details</a>
+                    <a class="dropdown-item" href="event-single.html">Event Details</a>
+                    <!---
+                    <a class="dropdown-item" href="blog-single.html">Blog Details</a>
+                    -->
+                  </div>
+                </li>
+                <li class="nav-item @@contact">
+                  <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+    <!--logs-->
+    <section >
+      <div class="modal fade rounded-0 border-0 p-4"  id="log2" role="dialog" aria-hidden="true" >
+        <div class="modal-dialog ">
+          <div class="modal-content logs">
+            <div class="modal-header ">
+            
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" class="me-2">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+          
+              <!-- partial:index.partial.html -->
+    <section class="logs">
+      <div class="form lo1">
+          
+        <ul class="tab-group">
+          <li class="tab active"><a href="#signup" class="">Sign Up</a></li>
+          <li class="tab"><a href="#login">Log In</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          <div id="signup">   
+            <h2 class="text-center text-primary">Sign Up</h2>
+            
+            <form action="/" method="post">
+            
+            <div class="top-row">
+              <div class="field-wrap">
+                <label>
+                  First Name<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" />
+              </div>
+          
+              <div class="field-wrap">
+                <label>
+                  Last Name<span class="req">*</span>
+                </label>
+                <input type="text"required autocomplete="off"/>
+              </div>
+            </div>
+            <div class="field-wrap">
+              <select required class="dropdown "  autocomplete="off" id="roleDropdown">
+                  <option value="" disabled selected style="background: rgba(160, 179, 176, 0.25); color: #a0b3b0;">Select Role<span class="req">*</span></option>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+              </select>
+          </div>
+          <div class="field-wrap" id="studentYearDropdown" style="display: none;">
+          
+            <select class="dropdown" autocomplete="off">
+              <option value="" disabled selected style="background: rgba(160, 179, 176, 0.25); color: #a0b3b0;">Select Year<span class="req">*</span></option>
+                <option value="1stYear">1st Year</option>
+                <option value="2ndYear">2nd Year</option>
+                <option value="3rdYear">3rd Year</option>
+            </select>
+        </div>
+        
+          
+            <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email"required autocomplete="off"/>
+            </div>
+            
+            <div class="field-wrap">
+              <label>
+                Set A Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off"/>
+            </div>
+            
+            <button type="submit" class="button button-block"/>Get Started</button>
+            
+            </form>
+    
+          </div>
+          
+          <div id="login">   
+            <h2 class="text-center text-primary">Welcome Back!</h2>
+            
+            <form action="/" method="post">
+            
+              <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email"required autocomplete="off"/>
+            </div>
+            
+            <div class="field-wrap">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off"/>
+            </div>
+            
+            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            
+            <button class="button button-block"/>Log In</button>
+            
+            </form>
+    
+          </div>
+          
+        </div><!-- tab-content -->
+        
+    </div> 
+    </section>
+    <!-- /form -->
+    <div class="modal-footer">
+      
+    </div>
+    
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--logs end-->
+    
+    </section> 
+    
+    
+    <!--Head-end-->
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="blog.html">Our Blog</a></li>
+          <li class="list-inline-item text-white h3 font-secondary nasted">Blog Details</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- blog details -->
+<section class="section-sm bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <img src="https://source.unsplash.com/800x500/?missile-defense" alt="Missile Defense" class="img-fluid w-100">
+      </div>
+      <div class="col-12">
+        <ul class="list-inline">
+          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><span class="font-weight-bold mr-2">Post:</span>Advanced Missile Defense Systems</li>
+          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light">September 20, 2023</li>
+          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-book mr-2"></i>Read 1,020</li>
+          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-share mr-2"></i>660</li>
+          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><a class="text-light" href="#"><i class="ti-comments mr-2"></i>312</a></li>
+        </ul>
+      </div>
+      <!-- border -->
+      <div class="col-12 mt-4">
+        <div class="border-bottom border-primary"></div>
+      </div>
+  <!-- blog content -->
+<div class="col-12 mb-5">
+  <h2>Advanced Missile Defense Systems</h2>
+  <ul>
+    <li><span class="ti-star text-primary mr-2"></span> Evolution of Missile Defense:</li>
+    <p>Discuss the historical development and evolution of missile defense systems, highlighting key milestones and breakthroughs.</p>
+    
+    <li><span class="ti-star text-primary mr-2"></span> Threat Landscape:</li>
+    <p>Examine the current global threat landscape, including the types of missiles and their capabilities that advanced defense systems need to counter.</p>
+    
+    <li><span class="ti-star text-primary mr-2"></span> Advanced Radar Technology:</li>
+    <p>Explore the role of cutting-edge radar technology in tracking and identifying incoming missiles with precision.</p>
+    
+    <li><span class="ti-star text-primary mr-2"></span> Interceptor Technologies:</li>
+    <p>Detail the various interceptor technologies used in missile defense, such as kinetic interceptors, directed energy weapons, and more.</p>
+    
+    <li><span class="ti-star text-primary mr-2"></span> Challenges and Limitations:</li>
+    <p>Discuss the challenges and limitations faced by missile defense systems, including decoys, countermeasures, and emerging threats.</p>
+
+    <li><span class="ti-star text-primary mr-2"></span> Role in National Security:</li>
+    <p>Explain the critical role of advanced missile defense systems in enhancing national security and deterring potential aggressors.</p>
+
+    <li><span class="ti-star text-primary mr-2"></span> International Cooperation:</li>
+    <p>Highlight instances of international cooperation in missile defense, showcasing collaborative efforts among nations.</p>
+
+    <li><span class="ti-star text-primary mr-2"></span> Future Developments:</li>
+    <p>Provide insights into the future of missile defense, including emerging technologies, research areas, and evolving strategies.</p>
+  </ul>
+</div>
+
+      <!-- comment box -->
+      <div class="col-12">
+        <form action="#" class="row">
+          <div class="col-sm-6">
+            <input type="text" class="form-control mb-4" id="name" name="name" placeholder="Full Name">
+          </div>
+          <div class="col-sm-6">
+            <input type="email" class="form-control mb-4" id="mail" name="mail" placeholder="Email Address">
+          </div>
+          <div class="col-12">
+            <textarea name="comment" id="comment" class="form-control mb-4" placeholder="Comment Here..."></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" value="send" class="btn btn-primary">post comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog details -->
+
+<!-- recommended post -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Recommended</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- blog post 2 -->
+<article class="col-lg-4 col-sm-6 mb-5">
+  <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+    <img class="card-img-top rounded-0" src="https://source.unsplash.com/300x200/?space" alt="Post thumb">
+    <div class="card-body">
+      <!-- post meta -->
+      <ul class="list-inline mb-3">
+        <!-- post date -->
+        <li class="list-inline-item mr-3 ml-0">September 15, 2023</li>
+        <!-- author -->
+        <li class="list-inline-item mr-3 ml-0">By Emily Parker</li>
+      </ul>
+      <a href="blog-single.html">
+        <h4 class="card-title">Exploring the Final Frontier: Space Technology</h4>
+      </a>
+      <p class="card-text">Discover the latest advancements in space technology and exploration missions.</p>
+      <a href="blog-single.html" class="btn btn-primary btn-sm">Read More</a>
+    </div>
+  </div>
+</article>
+
+<!-- blog post 3 -->
+<article class="col-lg-4 col-sm-6 mb-5">
+  <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+    <img class="card-img-top rounded-0" src="https://source.unsplash.com/300x200/?medical-technology" alt="Post thumb">
+    <div class="card-body">
+      <!-- post meta -->
+      <ul class="list-inline mb-3">
+        <!-- post date -->
+        <li class="list-inline-item mr-3 ml-0">September 12, 2023</li>
+        <!-- author -->
+        <li class="list-inline-item mr-3 ml-0">By Alex Johnson</li>
+      </ul>
+      <a href="blog-single.html">
+        <h4 class="card-title">Revolutionizing Healthcare: Latest Medical Technologies</h4>
+      </a>
+      <p class="card-text">Learn how cutting-edge medical technologies are improving patient care and diagnosis.</p>
+      <a href="blog-single.html" class="btn btn-primary btn-sm">Read More</a>
+    </div>
+  </div>
+</article>
+
+<!-- blog post 4 -->
+<article class="col-lg-4 col-sm-6 mb-5">
+  <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+    <img class="card-img-top rounded-0" src="https://source.unsplash.com/300x200/?robotics" alt="Post thumb">
+    <div class="card-body">
+      <!-- post meta -->
+      <ul class="list-inline mb-3">
+        <!-- post date -->
+        <li class="list-inline-item mr-3 ml-0">September 8, 2023</li>
+        <!-- author -->
+        <li class="list-inline-item mr-3 ml-0">By Michael Smith</li>
+      </ul>
+      <a href="blog-single.html">
+        <h4 class="card-title">Advancements in Robotics: Future of Automation</h4>
+      </a>
+      <p class="card-text">Explore the latest developments in robotics and their impact on automation and industry.</p>
+      <a href="blog-single.html" class="btn btn-primary btn-sm">Read More</a>
+    </div>
+  </div>
+</article>
+
+</div>
+  </div>
+</section>
+<!-- /recommended post -->
+
+
+<!-- footer -->
+<footer>
+  <!-- newsletter -->
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+          <h3 class="text-white" >Subscribe Now</h3>
+          <form action="#">
+            <div class="input-wrapper">
+              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
+              <button type="submit" value="send" class="btn btn-primary">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer content -->
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="" alt="" > <p class="h2">NMA</p></a>
+          <ul class="list-unstyled">
+            <li class="mb-2">Avinashi Rd, PSG CAS, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014 </li>
+            <li class="mb-2">+91 8843588534</li>
+            <li class="mb-2">+91 9943599534</li>
+            <li class="mb-2"><a href="mailto:bvocnmapsgcas@gmail.com">bvocnmapsgcas@gmail.com</a></li>
+          </ul>
+        </div>
+        <!-- company -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">COMPANY</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
+            <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
+            <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
+            <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <!-- links -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">LINKS</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
+            <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
+            <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
+            <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SUPPORT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Language</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">RECOMMEND</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="https://www.hackthebox.com/">Hack The Box</a></li>
+            <li class="mb-3"><a class="text-color" href="https://overthewire.org/wargames/">OverTheWire</a></li>
+            <li class="mb-3"><a class="text-color" href="https://www.vulnhub.com/">VulnHub</a></li>
+            <li class="mb-3"><a class="text-color" href="https://pentesterlab.com/">PentesterLab</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 text-sm-left text-center">
+          <p class="mb-0">Copyright
+            <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> 
+            ©  By <a href="./index.html">Netron</a></p> . All Rights Reserved.
+        </div>
+        <div class="col-sm-5 text-sm-right text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-facebook text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-twitter-alt text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.instagram.com/bnma_psgcas/"><i class="ti-instagram text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="3"><i class="ti-dribbble text-primary"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+
+<section>
+
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- aos -->
+  <script src="plugins/aos/aos.js"></script>
+  <!-- venobox popup -->
+  <script src="plugins/venobox/venobox.min.js"></script>
+  <!-- mixitup filter -->
+  <script src="plugins/mixitup/mixitup.min.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="./js/teach.js"></script>
+  
+  
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./dist/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </section>
+</body>
+</html>
