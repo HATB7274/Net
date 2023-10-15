@@ -95,3 +95,15 @@ document.getElementById('roleDropdown').addEventListener('change', function() {
         studentYearDropdown.style.display = 'none';
     }
 });
+
+// JavaScript for showing/hiding the password
+const showPasswordCheckbox = document.getElementById("showPassword");
+const passwordInput = document.getElementById("pass1");
+
+showPasswordCheckbox.addEventListener("change", function () {
+  if (this.checked) {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+});
