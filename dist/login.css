@@ -18,7 +18,7 @@ a:hover {
 }
 
 .req {
-  color: #ffbc3b;
+  color: #000000;
 }
 
 .lo1 {
@@ -90,22 +90,25 @@ h1 {
 .field-wrap {
   position: relative;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 label {
   position: absolute;
   transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #746f6f;
+  
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size: 18px;
+  padding-top: 3px;
 }
 
 label .req {
   margin: 2px;
-  color: #ffbc3b;
+  color: #22211f;
 }
 
 label.active {
@@ -119,16 +122,17 @@ label.active .req {
 }
 
 label.highlight {
-  color: #ffbc3b;
+  color: #1b1b1a;
 }
 
 input, textarea, select {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 300;
   display: block;
   width: 100%;
   padding: 10px;
   border: 1px solid #a0b3b0;
-  color: #333;
+  color: #252420;
   border-radius: 4px;
   transition: border-color .25s ease, box-shadow .25s ease;
   background: #f7f7f7;
@@ -155,7 +159,7 @@ textarea {
   text-transform: uppercase;
   letter-spacing: .1em;
   background: #ffbc3b;
-  color: #fff;
+  color: #272121;
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -177,12 +181,15 @@ textarea {
 
 /* Placeholder text color */
 input::placeholder, textarea::placeholder, select::placeholder {
-  color: yellow;
+  color: #1a1918;
+  font-weight: 300;
 }
 
 /* Role dropdown style */
 .yellow-placeholder.select-dropdown {
-  color: yellow;
+  color: #22211f;
+  font-weight: 300;
+  
 }
 
 #studentYearDropdown {
@@ -245,4 +252,13 @@ input::placeholder, textarea::placeholder, select::placeholder {
 #studentYearDropdown textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
+}
+
+.dropdown> option{
+  background: white;
+
+color: #ffaa00 !important;
+}
+.te{
+  color:#ffaa00;
 }

@@ -1,76 +1,103 @@
- // Import the functions you need from the SDKs you need
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
- import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
- import { getDatabase,ref,set,get,child } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
- // TODO: Add SDKs for Firebase products that you want to use
- // https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  
 
- // Your web app's Firebase configuration
- // For Firebase JS SDK v7.20.0 and later, measurementId is optional
- const firebaseConfig = {
-   apiKey: "AIzaSyDY-9djuTAklWO9M1mX4vH08B_e-Ez3juQ",
-   authDomain: "netron-3d6d6.firebaseapp.com",
-   databaseURL: "https://netron-3d6d6-default-rtdb.firebaseio.com",
-   projectId: "netron-3d6d6",
-   storageBucket: "netron-3d6d6.appspot.com",
-   messagingSenderId: "474599067135",
-   appId: "1:474599067135:web:8bae6b3c02040613bf2bca",
-   measurementId: "G-6V68XKQV5E"
- };
+  const firebaseConfig = {
+    apiKey: "AIzaSyDY-9djuTAklWO9M1mX4vH08B_e-Ez3juQ",
+    authDomain: "netron-3d6d6.firebaseapp.com",
+    databaseURL: "https://netron-3d6d6-default-rtdb.firebaseio.com",
+    projectId: "netron-3d6d6",
+    storageBucket: "netron-3d6d6.appspot.com",
+    messagingSenderId: "474599067135",
+    appId: "1:474599067135:web:8bae6b3c02040613bf2bca",
+    measurementId: "G-6V68XKQV5E"
+  };
 
- // Initialize Firebase
- const app = initializeApp(firebaseConfig);
- const analytics = getAnalytics(app);
- const db =getDatabase(app);
- document.getElementById("sub1").addEventListener('click', function (e) {
- e.preventDefault();
- 
- var role = document.getElementById("roleDropdown").value;
- var yearValue = null; // Default year value for teachers.
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
 
- // If the selected role is "student," get the year value.
- if (role === "student") {
-     var yearDropdown = document.querySelector("#studentYearDropdown select");
-     yearValue = yearDropdown.value;
- }
+  const messageContainer = document.getElementById("message-container");
 
- var userValue = document.getElementById("user1").value;
- var lastValue = document.getElementById("last1").value;
- var emailValue = document.getElementById("email1").value;
- var passValue = document.getElementById("pass1").value;
+  function showMessage(message, isError = true) {
+    messageContainer.textContent = message;
+    messageContainer.style.backgroundColor = isError ? "#ff5555" : "#55ff55";
+    messageContainer.style.display = "block";
+    setTimeout(() => {
+      messageContainer.style.display = "none";
+    }, 3000);
+  }
 
- // Create an object to store user data.
- var userData = {
-     UserId: userValue,
-     Name: lastValue,
-     EmailId: emailValue,
-     Password: passValue,
-     Role: role,
-     StudentYear: yearValue
- };
+  document.getElementById("sub1").addEventListener('click', function (e) {
+    e.preventDefault();
 
- // Store the data in Firebase.
- var dbRef = ref(db, 'user/' + userValue);
+    const userValue = document.getElementById("user1").value;
+    const lastValue = document.getElementById("last1").value;
+    const emailValue = document.getElementById("email1").value;
+    const passValue = document.getElementById("pass1").value;
 
- set(dbRef, userData)
-     .then(() => {
-         console.log('Data successfully saved to Firebase');
-     })
-     .catch((error) => {
-         console.error('Error saving data to Firebase:', error);
-     });
-});
+    if (!userValue || !lastValue || !emailValue || !passValue) {
+      showMessage("Please fill in all required fields.");
+      return;
+    }
 
+    if (!isValidEmail(emailValue)) {
+      showMessage("Please enter a valid email address.");
+      return;
+    }
 
- // Add an event listener to the role dropdown.
-document.getElementById("roleDropdown").addEventListener("change", function () {
- var role = this.value; // Get the selected role.
- var studentYearDropdown = document.getElementById("studentYearDropdown");
+    if (!isValidUserId(userValue)) {
+      showMessage("User ID should contain uppercase, lowercase, numbers, and symbols.");
+      return;
+    }
 
- // If the selected role is "student," display the year dropdown; otherwise, hide it.
- if (role === "student") {
-     studentYearDropdown.style.display = "block";
- } else {
-     studentYearDropdown.style.display = "none";
- }
-});
+    if (!isValidPassword(passValue)) {
+      showMessage("Password should have at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character.");
+      return;
+    }
+
+    // Rest of your code to store data in Firebase
+    const role = document.getElementById("roleDropdown").value;
+    const yearDropdown = document.querySelector("#studentYearDropdown select");
+    const yearValue = role === "student" ? yearDropdown.value : null;
+
+    const userData = {
+      UserId: userValue,
+      Name: lastValue,
+      EmailId: emailValue,
+      Password: passValue,
+      Role: role,
+      StudentYear: yearValue
+    };
+
+    const dbRef = ref(db, 'user/' + userValue);
+
+    set(dbRef, userData)
+      .then(() => {
+        showMessage("Data successfully saved to Firebase", false);
+      })
+      .catch((error) => {
+        showMessage("Error saving data to Firebase: " + error);
+      });
+  });
+
+  document.getElementById("roleDropdown").addEventListener("change", function () {
+    const role = this.value;
+    const studentYearDropdown = document.getElementById("studentYearDropdown");
+    studentYearDropdown.style.display = role === "student" ? "block" : "none";
+  });
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isValidUserId(userId) {
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
+    return regex.test(userId);
+  }
+
+  function isValidPassword(password) {
+    // Enhanced password format:
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
+    return regex.test(password);
+  }

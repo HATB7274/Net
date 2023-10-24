@@ -63,9 +63,9 @@
             <div class="col-lg-8 text-center text-lg-right">
               <ul class="list-inline">
                 <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="notice.html">notice</a></li>
-                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="research.html">research</a></li>
+              
                 <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="scholarship.html">SCHOLARSHIP</a></li>
-                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#log2">Login</a></li>
+                <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#log2">Login & Reg</a></li>
     
               </ul>
             </div>
@@ -109,6 +109,7 @@
                 <li class="nav-item @@blog">
                   <a class="nav-link" href="blog.html">BLOG</a>
                 </li>
+                <!--
                 <li class="nav-item dropdown view">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -116,20 +117,10 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="teacher.html">Teacher</a>
-                    <!--
-                    <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
-                    -->
-                    <a class="dropdown-item" href="notice.html">Notice</a>
-                    <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                    <a class="dropdown-item" href="research.html">Research</a>
-                    <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                    <a class="dropdown-item" href="course-single.html">Course Details</a>
-                    <a class="dropdown-item" href="event-single.html">Event Details</a>
-                    <!---
-                    <a class="dropdown-item" href="blog-single.html">Blog Details</a>
-                    -->
+                 
                   </div>
                 </li>
+                -->
                 <li class="nav-item @@contact">
                   <a class="nav-link" href="contact.html">CONTACT</a>
                 </li>
@@ -140,145 +131,121 @@
       </div>
     </header>
     <!-- /header -->
-    <!--logs-->
-    <section >
-      <div class="modal fade rounded-0 border-0 p-4"  id="log2" role="dialog" aria-hidden="true" >
-        <div class="modal-dialog ">
-          <div class="modal-content logs">
-            <div class="modal-header ">
-            
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close" class="me-2">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-          
-              <!-- partial:index.partial.html -->
-    <section class="logs">
-      <div class="form">
-        <div id="message-container" style="display: none; background-color: #ffaa00 !important; color: white; padding: 10px; text-align: center; z-index: 999;"></div>
-
-        <section class="logs">
-        <ul class="tab-group">
-          <li class="tab active"><a href="#signup">Sign Up</a></li>
-          <li class="tab"><a href="#login">Log In</a></li>
-        </ul>
-        
-        <div class="tab-content">
-          <div id="signup">   
-            <h1>Sign Up for Free</h1>
-            
-            <form action="" method="" class="text-center ">
-            
-         
-            
-          
-          
-           
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" id="user1"/>
-            </div>
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off" id="last1"/>
-            </div>
-            <div class="field-wrap">
-              <select required class="dropdown "  autocomplete="off" id="roleDropdown">
-                  <option value="" disabled selected style="background: rgba(160, 179, 176, 0.25); color: #a0b3b0;">Select Role<span class="req">*</span></option>
-                  <option value="student">Student</option>
-                  <option value="teacher">Teacher</option>
-              </select>
-          </div>
-          <div class="field-wrap" id="studentYearDropdown" style="display: none;">
-          
-            <select class="dropdown" autocomplete="off">
-              <option value="" disabled selected style="background: rgba(160, 179, 176, 0.25); color: #a0b3b0;">Select Year<span class="req">*</span></option>
-                <option value="1stYear">1st Year</option>
-                <option value="2ndYear">2nd Year</option>
-                <option value="3rdYear">3rd Year</option>
-            </select>
-        </div>
-            <div class="field-wrap">
-              <label>
-                Email Address<span class="req">*</span>
-              </label>
-              <input type="email"required autocomplete="off" id="email1"/>
-            </div>
-            
-            <div class="field-wrap">
-              <label>
-                Set A Password<span class="req">*</span>
-              </label>
-              <input type="password" required autocomplete="off" id="pass1" />
-             
-              
-              </div>
-            
-            </div>
-            
-            
-            <button type="submit" class="button button-block"/ id="sub1">Get Started</button>
-            
-            </form>
   
-          </div>
-          
-          <div id="login">
-            <h1>Welcome Back!</h1>
-          
-            <form id="login-form" method="post">
-              <div class="field-wrap">
-                <label>
-                  Email Address<span class="req">*</span>
-                </label>
-                <input type="email" required autocomplete="off" id="login-email" />
-              </div>
-          
-              <div class="field-wrap">
-                <label>
-                  Password<span class="req">*</span>
-                </label>
-                <input type="password" required autocomplete="off" id="login-password" />
-              </div>
-          
-              <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-              <button type="button" class="button button-block" id="loginBtn">Log In</button>
-            </form>
-          </div>
-          
-          
-        </div><!-- tab-content -->
-        
-  </div> <!-- /form -->
-    </section>
-    <!-- /form -->
-    <div class="modal-footer">
-      
-    </div>
-    
-            </div>
-          </div>
-          
-          </div>
+    <!--head-end-->
+    <!--logs-->
+<section>
+  <div class="modal fade rounded-0 border-0 p-4" id="log2" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content logs">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" class="me-2">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <section class="logs">
+            <div class="form">
+              <div id="message-container" style="display: none; background-color: #ffaa00 !important; color: white; padding: 10px; text-align: center; z-index: 999;"></div>
+
+              <ul class="tab-group">
+                <li class="tab active"><a href="#signup">Sign Up</a></li>
+                <li class="tab"><a href="#login">Log In</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="signup">
+                  <h1>Sign Up for Free</h1>
+
+                  <form action="" method="" class="text-center">
+                    <div class="field-wrap">
+                      <label >
+                        First Name<span class="req">*</span>
+                      </label>
+                      <input type="text" required autocomplete="off" id="user1" />
+                    </div>
+                    <div class="field-wrap">
+                      <label>
+                        Last Name<span class="req">*</span>
+                      </label>
+                      <input type="text" required autocomplete="off" id="last1" />
+                    </div>
+                    <!--Department-->
+                    <div class="field-wrap">
+                      <select required class="dropdown" autocomplete="off" id="roleDropdown">
+                        <option value="" disabled selected class="te">Select Department<span class="req">*</span></option>
+                        <option value="student">Bvoc.N&MA</option>
+                        <option value="teacher">Other</option>
+                      </select>
+                    </div>
+                       <!--Department-->
+                    <div class="field-wrap">
+                      <select required class="dropdown" autocomplete="off" id="roleDropdown">
+                        <option value="" disabled selected >Select Role<span class="req">*</span></option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                      </select>
+                    </div>
+                    <div class="field-wrap" id="studentYearDropdown" style="display: none;">
+                      <select class="dropdown" autocomplete="off">
+                        <option value="" disabled selected  >Select Year<span class="req">*</span></option>
+                        <option value="1stYear">1st Year</option>
+                        <option value="2ndYear">2nd Year</option>
+                        <option value="3rdYear">3rd Year</option>
+                      </select>
+                    </div>
+                    <div class="field-wrap">
+                      <label>
+                        Email Address<span class="req">*</span>
+                      </label>
+                      <input type="email" required autocomplete="off" id="email1" />
+                    </div>
+                    <div class="field-wrap">
+                      <label>
+                        Set A Password<span class="req">*</span>
+                      </label>
+                      <input type="password" required autocomplete="off" id="pass1" />
+                    </div>
+                    <button type="submit" class="button button-block" id="sub1">Get Started</button>
+                  </form>
+                </div>
+
+                <div id="login">
+                  <h1>Welcome Back!</h1>
+                  <form id="login-form" method="post">
+                    <div class="field-wrap">
+                      <label>
+                        UserId<span class="req">*</span>
+                      </label>
+                      <input type="text" required autocomplete="off" id="login-email" />
+                    </div>
+                 
+                    <div class="field-wrap">
+                      <label>
+                        Password<span class="req">*</span>
+                      </label>
+                      <input type="password" required autocomplete="off" id="login-password" />
+                    </div>
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+                    <button type="button" class="button button-block" id="loginBtn">Log In</button>
+                  </form>
+                </div>
+              </div><!-- tab-content -->
+            </div> <!-- /form -->
+          </section>
         </div>
       </div>
-    </section>
-    <!--logs end-->
-    
-    </section> 
-    
+    </div>
+  </div>
+</section>
+<!--logs end-->
+ 
     
     <!--Head-end-->
-
-
+  </section>
+<!--Head-end-->
 <!-- hero slider -->
-<section class="hero-section overlay bg-cover" data-background="images/banner/banner-1.jpg">x
+<section class="hero-section overlay bg-cover" data-background="images/e-block.jpg">x
   <div class="container">
     <div class="hero-slider">
       <!-- slider item -->
@@ -286,11 +253,8 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+            <p class="text-muted mb-4 ms-5" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Networking and mobile applications are the dynamic duo of the digital age. Networking, the backbone of the internet, connects the world, enabling communication and information sharing. Mobile applications, the user-friendly gateways, empower individuals with tools, entertainment, and services at their fingertips, shaping the way we live, work, and connect in our interconnected world.</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Learn More</a>
           </div>
         </div>
       </div>
@@ -299,11 +263,8 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
+            <p class="text-muted mb-4 ms-5" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Networking and mobile applications are the dynamic duo of the digital age. Networking, the backbone of the internet, connects the world, enabling communication and information sharing. Mobile applications, the user-friendly gateways, empower individuals with tools, entertainment, and services at their fingertips, shaping the way we live, work, and connect in our interconnected world.</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Learn More</a>
           </div>
         </div>
       </div>
@@ -312,11 +273,8 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
+            <p class="text-muted mb-4 ms-5" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Networking and mobile applications are the dynamic duo of the digital age. Networking, the backbone of the internet, connects the world, enabling communication and information sharing. Mobile applications, the user-friendly gateways, empower individuals with tools, entertainment, and services at their fingertips, shaping the way we live, work, and connect in our interconnected world.</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Learn More</a>
           </div>
         </div>
       </div>
@@ -329,34 +287,31 @@
 <section class="bg-gray">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
-      <div class="col-xl-4 col-lg-5 align-self-end">
-        <img class="img-fluid w-100" src="images/banner/banner-feature.png" alt="banner-feature">
+      <div class="col-xl-4 col-lg-5 align-self-end mb-60 img-fluid" style="background-image: url('https://uploads-ssl.webflow.com/61b21a152ca3e478ff782964/627e650f22a9a52cd54085be_Computer%20networking.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100vh; position: relative;">
+        <!-- Content for the column goes here -->
       </div>
+      
       <div class="col-xl-8 col-lg-7">
         <div class="row feature-blocks bg-gray justify-content-between">
           <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
             <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-            <h3 class="mb-xl-4 mb-lg-3 mb-4">Scholorship News</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. Ut enim ad</p>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Networking</h3>
+            <p>Learn about the exciting world of networking and stay informed about the latest advancements and technologies in the field. Join our network community to connect with professionals and expand your knowledge.</p>
           </div>
           <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
-            <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Notice Board</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. Ut enim ad</p>
+            <i class="ti-mobile mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Mobile Applications</h3>
+            <p>Discover the dynamic world of mobile applications and gain expertise in developing innovative apps for various platforms. Get hands-on experience in creating user-friendly mobile solutions that cater to modern user needs.</p>
           </div>
           <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
             <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
             <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Achievements</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. Ut enim ad</p>
+            <p>Explore our remarkable achievements and success stories. We take immense pride in the accomplishments of our students and alumni, who have made significant contributions in their respective fields.</p>
           </div>
           <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
             <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
             <h3 class="mb-xl-4 mb-lg-3 mb-4">Admission Now</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. Ut enim ad</p>
+            <p>Don't miss the opportunity to begin your educational journey with us. Admissions are currently open, and we look forward to welcoming you to our academic community. Apply today to shape your future.</p>
           </div>
         </div>
       </div>
@@ -373,9 +328,9 @@
         <h3 class="section-title">PSG College of Arts and Science</h3>
         <p class="lh-sm lh-base">PSG College of Arts and Science was started in 1947 by the PSG and Sons Charities which was founded in 1926 by the four sons of P.S. Govindasamy Naidu. </p>
         <ul id="custom-list">
-          <li class="mt-3 lh-base"> This institute offers 43 Undergraduate Programmes, 4 BVoc Programmes, 27 Postgraduate Programmes, 1 Five year Integrated Postgraduate Programme, 3 PG Diploma Programmes, M.Phil and Ph.D Programmes are offered in 25 Disciplines.</li>
-          <li class="mt-3 lh-base "> The Library built up area is 24,500 sq.ft. with the seating capacity for about 400 readers. It is well stocked and presently has a collection of over 1,20000 volumes on different subjects.</li>
-          <li class="mt-3 lh-base"> Wizards and Heartbeat are the annual inter-departmental cultural competitions and Cascall and Euphoria are the annual inter-college cultural competitions. Other festivals include "Gateway", state-level inter-collegiate technical festival by Department of Computer Science.</li>
+          <li class="mt-3 lh-base list-style-arrow"> This institute offers 43 Undergraduate Programmes, 4 BVoc Programmes, 27 Postgraduate Programmes, 1 Five year Integrated Postgraduate Programme, 3 PG Diploma Programmes, M.Phil and Ph.D Programmes are offered in 25 Disciplines.</li>
+          <li class="mt-3 lh-base list-style-arrow"> The Library built up area is 24,500 sq.ft. with the seating capacity for about 400 readers. It is well stocked and presently has a collection of over 1,20000 volumes on different subjects.</li>
+          <li class="mt-3 lh-base list-style-arrow"> Wizards and Heartbeat are the annual inter-departmental cultural competitions and Cascall and Euphoria are the annual inter-college cultural competitions. Other festivals include "Gateway", state-level inter-collegiate technical festival by Department of Computer Science.</li>
         </ul>
         <a href="about.html" class="btn btn-primary-outline mt-3">Learn more</a>
       </div>
@@ -448,7 +403,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 1"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -469,7 +424,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 2"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -488,7 +443,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 4"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -508,7 +463,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 3"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -528,7 +483,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 5"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -548,7 +503,7 @@
       <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="https://source.unsplash.com/random/800x600/?programming" alt="Programming Course 6"> <!-- Updated image source with Unsplash URL -->
           <div class="card-body">
-              <ul class="list-inline mb-2">
+              <ul class="list-inline mb-2 text-color">
                   <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>09-18-2023</li> <!-- Updated date -->
                   <li class="list-inline-item"><a class="text-color" href="#">Programming</a></li>
               </ul>
@@ -574,76 +529,44 @@
 <!-- /courses -->
 <!--teachers-->
 <section>
+
+</section>
+<!--yteachers-end-->
+
   <!-- teachers -->
-<section class="section " >
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-12">
-              <h2 class="section-title">Our Teachers</h2>
-          </div>
-          <!-- Owl Carousel for teachers -->
-          <div id="teacherCarousel" class="owl-carousel owl-theme">
-              <!-- Teacher 1 -->
-              <div class="col-7 col-sm-6 teacher-card">
-                  <div class="card border-0 rounded-0 hover-shadow">
-                      <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/98364.jpg" alt="teacher">
-                      <div class="card-body">
-                          <a href="teacher-single.html">
-                              <h4 class="card-title">Dr Nithya P</h4>
-                          </a>
-                          <p>Head of Depart &amp; Professor</p>
-                          <ul class="list-inline">
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <!-- Teacher 2 -->
-              <div class="col-7 col-sm-6 teacher-card">
-                  <div class="card border-0 rounded-0 hover-shadow">
-                      <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/111905.jpg" alt="teacher">
-                      <div class="card-body">
-                          <a href="teacher-single.html">
-                              <h4 class="card-title">Dr Sindhuja L S</h4>
-                          </a>
-                          <p>Assistant Professor</p>
-                          <ul class="list-inline">
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-              <!-- Teacher 3 -->
-              <div class="col-7 col-sm-6 teacher-card">
-                  <div class="card border-0 rounded-0 hover-shadow">
-                      <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/968551.jpg" alt="teacher">
-                      <div class="card-body">
-                          <a href="teacher-single.html">
-                              <h5 class="card-title">Mrs Hemalatha.R</h5>
-                          </a>
-                          <p>Assistant Professor</p>
-                          <ul class="list-inline">
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-                  <!-- Teacher 4 -->
-                  <div class="col-7 col-sm-6 teacher-card">
+  <section class="section " >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="section-title">Our Teachers</h2> 
+            </div>
+            <!-- Owl Carousel for teachers -->
+            <div id="teacherCarousel" class="owl-carousel owl-theme">
+                <!-- Teacher 1 -->
+                <div class="col-7 col-sm-6 teacher-card">
                     <div class="card border-0 rounded-0 hover-shadow">
-                        <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/98459.jpg" alt="teacher">
+                        <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/98364.jpg" alt="teacher">
                         <div class="card-body">
                             <a href="teacher-single.html">
-                                <h6 class="card-title">Dr Uma Maheswari B</h6>
+                                <h4 class="card-title">Dr Nithya P</h4>
+                            </a>
+                            <p>Head of Depart &amp; Professor</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Teacher 2 -->
+                <div class="col-7 col-sm-6 teacher-card">
+                    <div class="card border-0 rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/111905.jpg" alt="teacher">
+                        <div class="card-body">
+                            <a href="teacher-single.html">
+                                <h4 class="card-title">Dr Sindhuja L S</h4>
                             </a>
                             <p>Assistant Professor</p>
                             <ul class="list-inline">
@@ -655,33 +578,51 @@
                         </div>
                     </div>
                 </div>
-                    <!-- Teacher 5 -->
-              <div class="col-7 col-sm-6 teacher-card">
-                <div class="card border-0 rounded-0 hover-shadow">
-                    <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/97848.jpg" alt="teacher">
-                    <div class="card-body">
-                        <a href="teacher-single.html">
-                            <h4 class="card-title">Dr Kavitha V R</h4>
-                        </a>
-                        <p>Associate Professor</p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-                            <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-                        </ul>
+                <!-- Teacher 3 -->
+                <div class="col-7 col-sm-6 teacher-card">
+                    <div class="card border-0 rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/968551.jpg" alt="teacher">
+                        <div class="card-body">
+                            <a href="teacher-single.html">
+                                <h5 class="card-title">Mrs Hemalatha.R</h5>
+                            </a>
+                            <p>Assistant Professor</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-                <!-- Teacher 6-->
-                <div class="col-lg-8 col-sm-6 teacher-card">
+                    <!-- Teacher 4 -->
+                    <div class="col-7 col-sm-6 teacher-card">
+                      <div class="card border-0 rounded-0 hover-shadow">
+                          <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/98459.jpg" alt="teacher">
+                          <div class="card-body">
+                              <a href="teacher-single.html">
+                                  <h6 class="card-title">Dr Uma Maheswari B</h6>
+                              </a>
+                              <p>Assistant Professor</p>
+                              <ul class="list-inline">
+                                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+                                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+                                  <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                      <!-- Teacher 5 -->
+                <div class="col-7 col-sm-6 teacher-card">
                   <div class="card border-0 rounded-0 hover-shadow">
-                      <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/255193.jpg" alt="teacher">
+                      <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/97848.jpg" alt="teacher">
                       <div class="card-body">
                           <a href="teacher-single.html">
-                              <h5 class="card-title">Dr Shanmugapriya I</h5>
+                              <h4 class="card-title">Dr Kavitha V R</h4>
                           </a>
-                          <p>Assistant Professor</p>
+                          <p>Associate Professor</p>
                           <ul class="list-inline">
                               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
                               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
@@ -691,15 +632,31 @@
                       </div>
                   </div>
               </div>
-              <!-- Add more teacher cards here -->
-          </div>
-          <!-- End Owl Carousel for teachers -->
-      </div>
-  </div>
-</section>
-<!-- /teachers -->
-</section>
-<!--yteachers-end-->
+                  <!-- Teacher 6-->
+                  <div class="col-lg-8 col-sm-6 teacher-card">
+                    <div class="card border-0 rounded-0 hover-shadow">
+                        <img class="card-img-top rounded-circle" src="https://psgcas.irins.org/assets/profile_images/255193.jpg" alt="teacher">
+                        <div class="card-body">
+                            <a href="teacher-single.html">
+                                <h5 class="card-title">Dr Shanmugapriya I</h5>
+                            </a>
+                            <p>Assistant Professor</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+                                <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more teacher cards here -->
+            </div>
+            <!-- End Owl Carousel for teachers -->
+        </div>
+    </div>
+  </section>
+  <!-- /teachers -->
 <!-- events -->
 <section class="section " >
   <div class="container">
@@ -874,10 +831,10 @@
           <!-- logo -->
           <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="" alt="" > <p class="h2">NMA</p></a>
           <ul class="list-unstyled">
-            <li class="mb-2">Avinashi Rd, PSG CAS, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014 </li>
-            <li class="mb-2">+91 8843588534</li>
-            <li class="mb-2">+91 9943599534</li>
-            <li class="mb-2"><a href="mailto:bvocnmapsgcas@gmail.com">bvocnmapsgcas@gmail.com</a></li>
+            <li class="mb-2 text-color ">Avinashi Rd, PSG CAS, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014 </li>
+            <li class="mb-2 text-color">+91 8843588534</li>
+            <li class="mb-2 text-color">+91 9943599534</li>
+            <li class="mb-2 text-color"><a href="mailto:bvocnmapsgcas@gmail.com">bvocnmapsgcas@gmail.com</a></li>
           </ul>
         </div>
         <!-- company -->
@@ -927,8 +884,8 @@
   <div class="copyright py-4 bg-footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-7 text-sm-left text-center">
-          <p class="mb-0">Copyright
+        <div class="col-sm-7 text-sm-left text-center text-color">
+          <p class="mb-0 text-color">Copyright
             <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
@@ -985,12 +942,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-  import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  // Import Firebase modules
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 
-  // Firebase configuration
-  const firebaseConfig = {
+// Firebase configuration
+const firebaseConfig = {
     apiKey: "AIzaSyDY-9djuTAklWO9M1mX4vH08B_e-Ez3juQ",
     authDomain: "netron-3d6d6.firebaseapp.com",
     databaseURL: "https://netron-3d6d6-default-rtdb.firebaseio.com",
@@ -999,135 +957,80 @@
     messagingSenderId: "474599067135",
     appId: "1:474599067135:web:8bae6b3c02040613bf2bca",
     measurementId: "G-6V68XKQV5E"
-  };
+};
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-  const auth = getAuth(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
 
-  const messageContainer = document.getElementById("message-container");
+// Function to handle user registration
+function registerUser(email, password, user, last, role, studentYear) {
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Additional registration logic
+            const userData = {
+                UserId: user,
+                Name: last,
+                EmailId: email,
+                Role: role,
+                StudentYear: studentYear
+            };
 
-  // Function to display messages
-  function showMessage(message, isError = true) {
+            const userRef = ref(db, 'users/' + userCredential.user.uid);
+            set(userRef, userData)
+                .then(() => {
+                    showMessage("Registration successful", false);
+                })
+                .catch((error) => {
+                    showMessage("Error saving user data: " + error.message);
+                });
+        })
+        .catch((error) => {
+            showMessage("Error during registration: " + error.message);
+        });
+}
+
+// Function to handle user login
+function loginUser(email, password) {
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            showMessage("Login successful", false);
+            const userRef = ref(db, 'users/' + userCredential.user.uid);
+            get(userRef)
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        // User data exists in the database
+                        // You can redirect to the index.html page
+                        window.location.href = "index.html"; // Replace with your index page URL
+                    } else {
+                        showMessage("User data not found in the database");
+                    }
+                })
+                .catch((error) => {
+                    showMessage("Error while checking user data in the database: " + error.message);
+                });
+        })
+        .catch((error) => {
+            showMessage("Login error: " + error.message);
+        });
+}
+
+// Function to display messages
+function showMessage(message, isError = true) {
+    const messageContainer = document.getElementById("message-container");
     messageContainer.textContent = message;
     messageContainer.style.backgroundColor = isError ? "#ff5555" : "#55ff55";
     messageContainer.style.display = "block";
     setTimeout(() => {
-      messageContainer.style.display = "none";
+        messageContainer.style.display = "none";
     }, 3000);
-  }
+}
 
-  // Function to handle user registration
-  document.getElementById("sub1").addEventListener('click', async function (e) {
-    e.preventDefault();
-    const emailValue = document.getElementById("email1").value;
-    const passValue = document.getElementById("pass1").value;
+// Example usage:
+// registerUser("user@example.com", "password123", "John", "Doe", "student", "2ndYear");
+// loginUser("user@example.com", "password123");
 
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, emailValue, passValue);
-      const user = userCredential.user;
-
-      // Additional registration logic
-      const userValue = document.getElementById("user1").value;
-      const lastValue = document.getElementById("last1").value;
-      const role = document.getElementById("roleDropdown").value;
-      const yearDropdown = document.querySelector("#studentYearDropdown select");
-      const yearValue = role === "student" ? yearDropdown.value : null;
-
-      const userData = {
-        UserId: userValue,
-        Name: lastValue,
-        EmailId: emailValue,
-        Role: role,
-        StudentYear: yearValue
-      };
-
-      const dbRef = ref(db, 'user/' + user.uid);
-      await set(dbRef, userData);
-
-      showMessage("Registration successful", false);
-    } catch (error) {
-      showMessage("Error during registration: " + error.message);
-    }
-  });
-
-  // Function to handle user login and database check
-  document.getElementById("loginBtn").addEventListener('click', async function (e) {
-    e.preventDefault();
-    const emailValue = document.getElementById("loginEmail").value;
-    const passValue = document.getElementById("loginPass").value;
-
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, emailValue, passValue);
-      showMessage("Login successful", false);
-      
-      // Get the user's UID after successful login
-      const user = userCredential.user;
-      const userUID = user.uid;
-
-      // Check if the user's data exists in the database
-      const dbRef = ref(db, 'user/' + userUID);
-
-      get(dbRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          // User data exists in the database
-          // You can redirect to the index.html page
-          window.location.href = "index.html"; // Replace with your index page URL
-        } else {
-          // User data not found in the database
-          showMessage("User data not found in the database");
-        }
-      }).catch((error) => {
-        showMessage("Error while checking user data in the database: " + error.message);
-      });
-    } catch (error) {
-      showMessage("Login error: " + error.message);
-    }
-  });
-
-  // Function to handle user logout
-  document.getElementById("logoutBtn").addEventListener('click', async function (e) {
-    e.preventDefault();
-    try {
-      await signOut(auth);
-      showMessage("Logged out successfully", false);
-    } catch (error) {
-      showMessage("Logout error: " + error.message);
-    }
-  });
-
-  // Event listener for role dropdown
-  document.getElementById("roleDropdown").addEventListener("change", function () {
-    const role = this.value;
-    const studentYearDropdown = document.getElementById("studentYearDropdown");
-    studentYearDropdown.style.display = role === "student" ? "block" : "none";
-  });
-
-  // Validation functions
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  function isValidPassword(password) {
-    // Enhanced password format
-    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
-    return regex.test(password);
-  }
-
-  // Check if the user is already authenticated (e.g., for session management)
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in
-      // You can perform actions for authenticated users here
-      if (user.email === "someemail@example.com" && user.uid === "someUID") {
-        // Redirect the user to the index.html page
-        window.location.href = "index.html"; // Replace with your index page URL
-      } else {
-        // No user is signed in
-        // You can handle non-authenticated users here
-      }
-    }
-  });
 </script>
 
 

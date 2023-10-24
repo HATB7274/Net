@@ -374,7 +374,7 @@ a h4:hover {
 }
 
 .bg-gray {
-  background: #f8f8f8;
+  background: #e2d7d7;
 }
 
 .text-primary {
@@ -382,7 +382,7 @@ a h4:hover {
 }
 
 .text-color {
-  color: #5c5c77;
+  color: #c4c1c1;
 }
 
 .text-light {
@@ -1036,4 +1036,30 @@ link:focus,
 
 .key:hover {
   transform: scale(1.2); /* Increase the size on hover */
+}
+
+
+.list-style-arrow::before {
+  content: '▶'; /* You can change this to any character you want */
+  color: #ffbc3b; /* Change this to the desired color */
+  margin-right: 0.5rem;
+}
+
+.text-color :hover{
+
+  color: #ffab08 !important;
+}
+.list-unstyled :hover{
+
+
+  color: #ffab08 !important;
+  
+
+}
+.text-color :active{
+  color: white !important;
+}
+.mb-2 :active{
+
+  color:#c4c1c1 !important;
 }
