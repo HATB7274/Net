@@ -107,3 +107,41 @@ showPasswordCheckbox.addEventListener("change", function () {
     passwordInput.type = "password";
   }
 });
+
+
+
+
+
+
+document.getElementById('readMoreButton').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow');
+    content.style.display = 'block';
+});
+
+document.getElementById('closeButton').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow');
+    content.style.display = 'none';
+});
+
+
+// Section 1
+document.getElementById('readMoreButton1').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow1');
+    content.style.display = 'block';
+});
+
+document.getElementById('closeButton1').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow1');
+    content.style.display = 'none';
+});
+
+// Section 2
+document.getElementById('readMoreButton2').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow2');
+    content.style.display = 'block';
+});
+
+document.getElementById('closeButton2').addEventListener('click', function() {
+    var content = document.getElementById('contentToShow2');
+    content.style.display = 'none';
+});

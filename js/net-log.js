@@ -1,103 +1,162 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
-  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
-  
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDY-9djuTAklWO9M1mX4vH08B_e-Ez3juQ",
-    authDomain: "netron-3d6d6.firebaseapp.com",
-    databaseURL: "https://netron-3d6d6-default-rtdb.firebaseio.com",
-    projectId: "netron-3d6d6",
-    storageBucket: "netron-3d6d6.appspot.com",
-    messagingSenderId: "474599067135",
-    appId: "1:474599067135:web:8bae6b3c02040613bf2bca",
-    measurementId: "G-6V68XKQV5E"
-  };
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDY-9djuTAklWO9M1mX4vH08B_e-Ez3juQ",
+  authDomain: "netron-3d6d6.firebaseapp.com",
+  databaseURL: "https://netron-3d6d6-default-rtdb.firebaseio.com",
+  projectId: "netron-3d6d6",
+  storageBucket: "netron-3d6d6.appspot.com",
+  messagingSenderId: "474599067135",
+  appId: "1:474599067135:web:8bae6b3c02040613bf2bca",
+  measurementId: "G-6V68XKQV5E"
+};
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
 
-  const messageContainer = document.getElementById("message-container");
+// Validation functions
+function isValidUserId(userId) {
+  // Require at least one uppercase letter, one lowercase letter, one number, and one special character, with a minimum length of 8 characters
+  const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
+  return regex.test(userId);
+}
 
-  function showMessage(message, isError = true) {
-    messageContainer.textContent = message;
-    messageContainer.style.backgroundColor = isError ? "#ff5555" : "#55ff55";
-    messageContainer.style.display = "block";
-    setTimeout(() => {
-      messageContainer.style.display = "none";
-    }, 3000);
-  }
+function isValidEmail(email) {
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
-  document.getElementById("sub1").addEventListener('click', function (e) {
-    e.preventDefault();
+function isValidPassword(password) {
+  // Require at least one uppercase letter, one lowercase letter, one number, and one special character, with a minimum length of 8 characters
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
+  return passwordRegex.test(password);
+}
 
-    const userValue = document.getElementById("user1").value;
-    const lastValue = document.getElementById("last1").value;
-    const emailValue = document.getElementById("email1").value;
-    const passValue = document.getElementById("pass1").value;
+// ... Firebase configuration and initialization code (same as before)
 
-    if (!userValue || !lastValue || !emailValue || !passValue) {
-      showMessage("Please fill in all required fields.");
+// ... Firebase configuration and initialization code (same as before)
+
+// Function to handle user registration
+function registerUser(email, password, user, last, department, role, year) {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Additional registration logic
+      const userData = {
+        UserId: user,
+        Name: last,
+        Department: department,
+        Role: role,
+        EmailId: email,
+        Password:password,
+      };
+
+      if (role === "student") {
+        userData.Year = year; // Include the selected year for students
+      }
+
+      const userRef = ref(db, 'users/' + userCredential.user.uid);
+      set(userRef, userData)
+        .then(() => {
+          alert("Registration successful");
+        })
+        .catch((error) => {
+          alert("Error saving user data: " + error.message);
+        });
+    })
+    .catch((error) => {
+      alert("Error during registration: " + error.message);
+    });
+}
+
+// Event listener for the registration form
+document.getElementById("sub1").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email1").value;
+  const password = document.getElementById("pass1").value;
+  const user = document.getElementById("user1").value;
+  const last = document.getElementById("last1").value;
+  const department = document.getElementById("departmentDropdown").value;
+  const role = document.getElementById("roleDropdown").value;
+  const year = document.getElementById("yearDropdown").value; // Get the selected year
+
+  if (email && password && user && last && department && role) {
+    // Validate user ID, email, and password before registration (you can add your validation functions)
+    // Your validation logic here...
+
+    if (role === "student" && year === "") {
+      alert("Please select a year for student registration.");
       return;
     }
 
-    if (!isValidEmail(emailValue)) {
-      showMessage("Please enter a valid email address.");
-      return;
-    }
-
-    if (!isValidUserId(userValue)) {
-      showMessage("User ID should contain uppercase, lowercase, numbers, and symbols.");
-      return;
-    }
-
-    if (!isValidPassword(passValue)) {
-      showMessage("Password should have at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character.");
-      return;
-    }
-
-    // Rest of your code to store data in Firebase
-    const role = document.getElementById("roleDropdown").value;
-    const yearDropdown = document.querySelector("#studentYearDropdown select");
-    const yearValue = role === "student" ? yearDropdown.value : null;
-
-    const userData = {
-      UserId: userValue,
-      Name: lastValue,
-      EmailId: emailValue,
-      Password: passValue,
-      Role: role,
-      StudentYear: yearValue
-    };
-
-    const dbRef = ref(db, 'user/' + userValue);
-
-    set(dbRef, userData)
-      .then(() => {
-        showMessage("Data successfully saved to Firebase", false);
-      })
-      .catch((error) => {
-        showMessage("Error saving data to Firebase: " + error);
-      });
-  });
-
-  document.getElementById("roleDropdown").addEventListener("change", function () {
-    const role = this.value;
-    const studentYearDropdown = document.getElementById("studentYearDropdown");
-    studentYearDropdown.style.display = role === "student" ? "block" : "none";
-  });
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Register the user if all validations pass
+    registerUser(email, password, user, last, department, role, year);
+  } else {
+    alert("Please fill in all required fields.");
   }
+});
 
-  function isValidUserId(userId) {
-    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
-    return regex.test(userId);
+// Show/hide studentYearDropdown based on role selection
+document.getElementById("roleDropdown").addEventListener("change", () => {
+  const roleDropdown = document.getElementById("roleDropdown");
+  const studentYearDropdown = document.getElementById("studentYearDropdown");
+  if (roleDropdown.value === "student") {
+    studentYearDropdown.style.display = "block";
+  } else {
+    studentYearDropdown.style.display = "none";
   }
+});
 
-  function isValidPassword(password) {
-    // Enhanced password format:
-    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}$/;
-    return regex.test(password);
+// ... Existing code for registration and Firebase setup ...
+
+// ... Existing code for registration and Firebase setup ...
+
+// Function to handle user login and redirect
+function loginUser(email, password, userId) {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Fetch the user's data from the database based on the user's unique ID
+      const userRef = ref(db, 'users/' + userCredential.user.uid);
+      get(userRef)
+        .then((snapshot) => {
+          const userData = snapshot.val();
+          if (userData && userData.UserId === userId) {
+            alert("Login successful ! Now You Redirecting");
+            // Redirect the user back to the original page after 2 seconds
+            setTimeout(function() {
+              window.location.replace(document.referrer);
+            }, 2000);
+          } else {
+            alert("Login failed: Invalid User ID or credentials.");
+          }
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    })
+    .catch((error) => {
+      alert("Login failed: " + error.message);
+    });
+}
+
+// Event listener for the login form
+document.getElementById("loginBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-pass").value;
+  const userId = document.getElementById("login-userid").value;
+
+  if (email && password && userId) {
+    // Log in the user if email, password, and user ID are provided
+    loginUser(email, password, userId);
+  } else {
+    alert("Please enter your email, user ID, and password.");
   }
+});
